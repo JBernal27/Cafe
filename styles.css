@@ -34,6 +34,7 @@
 
 html{
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 *::after,
@@ -54,9 +55,13 @@ h2{
     margin-bottom: 10px;
 }
 
+.bold{
+    font-weight: 1000;
+}
+
 /* HEADER */
 header{
-    background-image: url(/Media/hero.jpg);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url(/Media/hero.jpg);
     min-height: 600px;
     background-size: cover;
     background-repeat: no-repeat;
@@ -115,6 +120,7 @@ nav{
     min-width: 450px;
     height: 50px;
     padding-top: 4px;
+    z-index: 4;
 }
 ::-webkit-scrollbar {
     display: none;
@@ -243,7 +249,7 @@ nav{
     justify-items: center;
     align-items: stretch;
     max-width: 100%;
-    margin-top: 40px;
+    margin-top: 60px;
 }
 
 .staff_card{
@@ -357,7 +363,6 @@ nav{
 
 .staff_card:active > .staff_info{
     display: flex;
-    z-index: -2;
     padding: 50% 15px 0px ;
     height: auto;
     border-bottom-left-radius: 15px;
@@ -410,11 +415,10 @@ nav{
 #products{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 400px) ;
+    grid-template-rows: repeat(3, 400px);
     margin: 4%;
     column-gap: 5px;
     row-gap: 5px;
-    /* background-color: rgba(var(--main_color)); */
     padding: 7px;
     border-radius: 30px;
 }
@@ -424,6 +428,12 @@ nav{
     height: 100%;
     object-fit: cover;
     border-radius: 30px;
+    transition: 0.3s ease-in-out;
+}
+
+#products img:hover{
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    scale: 1.005;
 }
 
 #products img:nth-child(1){
@@ -475,6 +485,7 @@ footer a{
 
 footer ul{
     list-style: none;
+    padding: 0px;
 }
 
 footer article{
@@ -563,6 +574,7 @@ footer article{
 @media screen and (max-width: 700px) {
     
     h1{
+        font-size: 45px;
         display: flex;
         flex-direction: column;
     }
@@ -572,12 +584,21 @@ footer article{
         border-radius: 0px;
         padding-right: 0px;
         min-width: 0px;
-        z-index: 10;
     }
 
     nav ul{
         padding: 0px;
         justify-content: center;
+        font-size: 14px;
+    }
+
+    #nav li{
+        padding: 0px;
+    }
+
+    #nav ul li a{
+        width: 100%;
+        height: 100%;
     }
 
     #staff_card_div{
@@ -623,6 +644,7 @@ footer article{
         height: auto;
         border-bottom-left-radius: 15px;
         border-bottom-right-radius: 15px;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
     }
 
     #staff_card_div:active > .staff_card:not(:active){
@@ -637,7 +659,7 @@ footer article{
         content: "¡Ver más!";
         position: absolute;
         top: 70%;
-        left: -20px;
+        left: -5px;
         padding: 5px;
         background-color: rgba(var(--main_color));
         color: #fff;
@@ -646,11 +668,44 @@ footer article{
     }
 
     #us_text h2{
-        font-size: 30px;
+        font-size: 29.5px;
+        text-align: center;
     }
 
     #us_text h3{
         font-size: 16px;
         text-align: center;
+    }
+
+    footer{
+        font-size: 10px;
+    }
+
+    #contact{
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+    }
+    #contact form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        height: 100%;
+        gap: 5px;
+    }
+
+    #contact form input{
+        width: 80%;
+    }
+
+    #products{
+        grid-template-rows: repeat(3, 150px) ;
+    }
+
+    #products img{
+        border-radius: 10px;
     }
 }

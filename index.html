@@ -7,16 +7,16 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header>
+    <header id="header">
       <div id="logo">
         <!-- <h1>CAFÉ AMANEC<span id="logo_dec">ER</span></h1> -->
         <h1>CAFÉ<span id="space">AMANEC<span id="logo_dec">ER</span></span></h1>
       </div>
       <nav>
         <ul id="nav">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Servicios</a></li>
-          <li><a href="#">Contactanos</a></li>
+          <li><a href="#header">Home</a></li>
+          <li><a href="#products">Productos</a></li>
+          <li><a href="#contact">Contactanos</a></li>
         </ul>
       </nav>
     </header>
@@ -54,7 +54,7 @@
             <h3>Juan Pérez</h3>
             <p>&#9733&#9733&#9733&#9733&#9733</p>
             <p>
-              "Gran café, ambiente relajado y personal amable. Ideal para
+              Gran café, ambiente relajado y personal amable. Ideal para
               trabajar o disfrutar de una charla. ¡Los postres son deliciosos,
               definitivamente regresaré!
             </p>
@@ -227,6 +227,19 @@
     </main>
 
     <footer>
+      <article id="privacy">
+        <ul>
+          <li><a href="#privacy">Terminos y Condiciones</a></li>
+          <li><a href="#privacy">Tratamiento de datos</a></li>
+          <li>Cafe Amanecer©</li>
+        </ul>
+      </article>
+      <article id="contact">
+        <form action="">
+          <input type="email" name="email" id="email">
+          <input type="submit" value="Contactame">
+        </form>
+      </article>
       <article id="secctions">
         <ul id="pages">
           <li><a href="#us">¿Quienes somos?</a></li>
@@ -238,25 +251,12 @@
       </article>
       <article>
         <ul id="social_media">
-          <li>Correo: cafeamanecer@gmail.com</li>
-          <li>Direccion: Cr 10 #23-34</li>
-          <li>Telefono: 123 456 7890</li>
-          <li>Instagram: @Cafe_Amanecer</li>
-          <li>Facebook: @Cafe_Amanecer</li>
-          <li>Twitter: @Cafe_Amanecer</li>
-        </ul>
-      </article>
-      <article id="contact">
-        <form action="">
-          <input type="email" name="email" id="email">
-          <input type="submit" value="Contactame">
-        </form>
-      </article>
-      <article id="privacy">
-        <ul>
-          <li><a href="#privacy">Terminos y Condiciones</a></li>
-          <li><a href="#privacy">Tratamiento de datos</a></li>
-          <li>Cafe Amanecer©</li>
+          <li><span class="bold">Correo:</span> cafeamanecer@gmail.com</li>
+          <li><span class="bold">Direccion:</span> Cr 10 #23-34</li>
+          <li><span class="bold">Telefono:</span> 123 456 7890</li>
+          <li><span class="bold">Instagram:</span> @Cafe_Amanecer</li>
+          <li><span class="bold">Facebook:</span> @Cafe_Amanecer</li>
+          <li><span class="bold">Twitter:</span> @Cafe_Amanecer</li>
         </ul>
       </article>
     </footer>
